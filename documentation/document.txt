@@ -1,0 +1,15 @@
+1. Tilte: Breeze Template
+2. Packages: 
+    Laravel installer 4.2.10
+    vite: 3.0.0
+    breeze: 1.14.3
+
+3. "devDependencies": {
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.6.0",
+        "lodash": "^4.17.19",
+        "postcss": "^8.1.14",
+        "vite": "^3.0.0"
+    }   
+
+4.      

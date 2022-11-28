@@ -1,0 +1,9 @@
+1.create project- composer create-project laravel/laravel breeze_template
+2.open in vs code
+3.composer require laravel/breeze --dev
+4.php artisan breeze:install
+5.put the code of your choosen dashboard template to the layout>app.blade.php(I have put otika dashboard template here.)
+6.make dashboard components and put the main section dashboard code in components>dashboard.(from <aside> to </aside>)
+7.put asset and other required file in pubic folder and add / in front of asset link. (i.e. /assets)
+8.now call the dashboard component in views>dashboard.
+9.make sidebar component and paste sidebar code in there from app.lade.php.(i.e. from <aside> to </aside>) and call x-sidebar to app.blade.php.
