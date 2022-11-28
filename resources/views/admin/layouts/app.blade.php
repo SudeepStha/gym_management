@@ -7,7 +7,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Otika - Admin Dashboard Template</title>
+  <title>Admin Dashboard</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="/assets/css/app.min.css">
   <!-- Template CSS -->
@@ -28,7 +28,7 @@
           <ul class="navbar-nav mr-3">
             <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
 									collapse-btn"> <i data-feather="align-justify"></i></a></li>
-            <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+            {{-- <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
                 <i data-feather="maximize"></i>
               </a></li>
             <li>
@@ -40,11 +40,11 @@
                   </button>
                 </div>
               </form>
-            </li>
+            </li> --}}
           </ul>
         </div>
         <ul class="navbar-nav navbar-right">
-          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
+          {{-- <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown"
               class="nav-link nav-link-lg message-toggle"><i data-feather="mail"></i>
               <span class="badge headerBadge1">
                 6 </span> </a>
@@ -153,35 +153,42 @@
                 <a href="#">View All <i class="fas fa-chevron-right"></i></a>
               </div>
             </div>
-          </li>
+          </li> --}}
           <li class="dropdown"><a href="#" data-toggle="dropdown"
               class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="/assets/img/user.png"
                 class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
-              <div class="dropdown-title">Hello Sarah Smith</div>
+              {{-- <div class="dropdown-title">Hello Sarah Smith</div>
               <a href="profile.html" class="dropdown-item has-icon"> <i class="far
 										fa-user"></i> Profile
               </a> <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>
                 Activities
               </a> <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>
                 Settings
-              </a>
+              </a> --}}
               <div class="dropdown-divider"></div>
-              <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
-                Logout
-              </a>
+                <form method="POST" action="{{ route('admin.logout') }}">
+                  @csrf
+
+                  <x-dropdown-link :href="route('admin.logout')"
+                          onclick="event.preventDefault();
+                                      this.closest('form').submit();" class=" text-decoration-none text-danger">
+                      <i class="fas fa-sign-out-alt"></i>
+                      {{ __('Log Out') }}
+                  </x-dropdown-link>
+              </form>
             </div>
           </li>
         </ul>
       </nav>
       <div class="main-sidebar sidebar-style-2">
-        <x-sidebar></x-sidebar>
+        <x-adminsidebar></x-adminsidebar>
       </div>
       <!-- Main Content -->
       <div class="main-content">
         
         {{$slot}}
-        <div class="settingSidebar">
+        {{-- <div class="settingSidebar">
           <a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>
           </a>
           <div class="settingSidebar-body ps-container ps-theme-default">
@@ -271,11 +278,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
       </div>
       <footer class="main-footer">
         <div class="footer-left">
-          <a href="templateshub.net">Templateshub</a></a>
+          <a href="https://www.codeit.com.np" target="_ blank">CODE IT</a></a>
         </div>
         <div class="footer-right">
         </div>

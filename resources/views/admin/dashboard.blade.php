@@ -1,3 +1,3 @@
 <x-admin-layout>
-    <x-dashboard/>
+    <x-admindashboard/>
 </x-admin-layout>

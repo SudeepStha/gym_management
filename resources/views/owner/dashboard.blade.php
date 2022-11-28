@@ -1,3 +1,3 @@
 <x-owner-layout>
-    <x-dashboard/>
+    <x-ownerdashboard/>
 </x-owner-layout>

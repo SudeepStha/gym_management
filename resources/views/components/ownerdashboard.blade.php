@@ -1,5 +1,5 @@
 <section class="section">
-    <h5>User Dashboard</h5>
+    <h5>Owner Dashboard</h5>
 
     <div class="row ">
         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
